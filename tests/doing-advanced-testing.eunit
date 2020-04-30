@@ -1,0 +1,41 @@
+
+
+
+
+@model
+operation loadModels() {
+  runTarget("load-models"); // nombre definido en el archivo ant
+}
+
+ 
+
+@test
+operation transformationWorksAsExpected() {
+  runTarget("petrinet2graph");
+  assertEqualModels("GraphExpected", "Graph");
+}
+
+
+@test 
+operation NodosHuerfanos() {
+	var petrinet := new Petrinet!Petrinet();
+	for ( node in petrinet.nodes ) {
+		assertFalse("El nodo no puede ser huerfano", true);
+	}
+}
+
+// La primera debe validar que el grafo resultante de la transformación de PetriNet.xmi 
+// no tiene nodos huérfanos, es decir, que no tiene nodos que no tengan ni arcos salientes 
+// ni arcos entrantes.
+
+
+
+
+// La segunda debe validar que el grafo resultante de transformar el modelo PetrinetAvanzado.xmi
+// (que se encuentra en el folder models) es correcto. Para esto, usted debe crear el grafo
+// correspondiente a la petrinet de la figura a continuación usando el editor de modelos arborescente.
+
+
+// Note que para la ejecución del nuevo EUnit hay que hacer modificaciones en los archivos eunit.xml y run.launch.
+
+ 

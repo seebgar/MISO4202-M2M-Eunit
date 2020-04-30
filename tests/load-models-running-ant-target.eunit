@@ -1,7 +1,7 @@
 
 @model
 operation loadModels() {
-  runTarget("load-models"); // nomvre definido en el archivo ant
+  runTarget("load-models"); // nombre definido en el archivo ant
 }
 
  
