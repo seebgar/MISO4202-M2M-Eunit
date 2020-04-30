@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<launchConfiguration type="org.eclipse.ant.AntLaunchConfigurationType">
+
+	<booleanAttribute key="org.eclipse.ant.ui.DEFAULT_VM_INSTALL" value="false"/>
+	
+	<stringAttribute key="org.eclipse.debug.core.ATTR_REFRESH_SCOPE" value="${project}"/>
+	
+	<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+		<!-- listEntry hace referencia al archivo ant que define los targets. -->
+		<listEntry value="/uniandes.edu.petrinet2graph/eunit.xml"/>
+	</listAttribute>
+	
+	<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+		<listEntry value="1"/>
+	</listAttribute>
+	
+	<stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.ant.ui.AntClasspathProvider"/>
+	
+	<!-- org.eclipse.jdt.launching.PROJECT_ATTR hace referencia al nombre del proyecto sobre el cual se van a correr las pruebas. -->
+	<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="uniandes.edu.petrinet2graph"/>
+	
+	<stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.ant.ui.AntClasspathProvider"/>
+	
+	<!-- org.eclipse.ui.externaltools.ATTR_ANT_TARGETS define cada uno de los archivos eunit a ejecutar, estos deben separarse por comas, es decir que en caso de crear nuevos eunit no basta con crear el archivo eunit en la carpeta tests, se debe especificarle al run.launch sobre la existencia de dichos archivos usando este atributo. -->
+	<stringAttribute key="org.eclipse.ui.externaltools.ATTR_ANT_TARGETS" value="with-model-loading-target,"/>
+	
+	<!-- org.eclipse.ui.externaltools.ATTR_LOCATION también define la ubicación del archivo ant que define los targets pero en relación al workspace, aquí se puede modificar la parte posterior a los dos puntos ‘:’. -->
+	<stringAttribute key="org.eclipse.ui.externaltools.ATTR_LOCATION" value="${workspace_loc:/uniandes.edu.petrinet2graph/eunit.xml}"/>
+	
+	<stringAttribute key="process_factory_id" value="org.eclipse.ant.ui.remoteAntProcessFactory"/>
+
+</launchConfiguration>
